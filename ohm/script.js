@@ -1,30 +1,60 @@
-  // Obtener los valores de los inputs
+const botonsum = document.getElementById("sum");
+const botonrest = document.getElementById("rest");
+const botonmult = document.getElementById("mult");
+const botondiv = document.getElementById("div");
 
+const resultado = document.getElementById("resultado")
 
+//al pulsar el boton activar la funcion suma
 
+botonsum.addEventListener("click", function() {
+    const input1 = parseFloat(document.getElementById("num1").value);
+    const input2 = parseFloat(document.getElementById("num2").value);
+    const output = input1 + input2;
+    resultado.innerText = output;
+});
 
-function multiplicar() {
-    const n1 = parseFloat(document.getElementById("num1").value) || 0;
-    const n2 = parseFloat(document.getElementById("num2").value) || 0;
-  // Realizar la multiplicación
-   const resultado1 = n1 * n2;
-  document.getElementById("resultado1").innerText = resultado1;
-};
+botonrest.addEventListener("click", function() {
+    const input1 = parseFloat(document.getElementById("num1").value);
+    const input2 = parseFloat(document.getElementById("num2").value);
+    const output = input1 - input2;
+    resultado.innerText = output;
+});
 
+botonmult.addEventListener("click", function() {
+    const input1 = parseFloat(document.getElementById("num1").value);
+    const input2 = parseFloat(document.getElementById("num2").value);
+    const output = input1 * input2;
+    resultado.innerText = output;
+});
 
-function dividir1() {
-    const n3 = parseFloat(document.getElementById("num3").value) || 0;
-    const n4 = parseFloat(document.getElementById("num4").value) || 0;
-    // Realizar la división
-    const resultado2 = n3 / n4;
-  document.getElementById("resultado2").innerText = resultado2;
-};
+botondiv.addEventListener("click", function() {
+    const input1 = parseFloat(document.getElementById("num1").value);
+    const input2 = parseFloat(document.getElementById("num2").value);
+    const output = input1 / input2;
+    resultado.innerText = output;
+});
 
-function dividir2() {
-    const n5 = parseFloat(document.getElementById("num5").value) || 0;
-    const n6 = parseFloat(document.getElementById("num6").value) || 0;
-    // Realizar la división
-    const resultado3 = n5 / n6;
-  document.getElementById("resultado3").innerText = resultado3;
-};
+document.addEventListener("keydown", function(event) {
+    if (event.key === "+") {
+        botonsum.click();
+    }
+});
 
+document.addEventListener("keydown", function(event) {
+    if (event.key === "-") {
+        botonrest.click();
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "*") {
+        botonmult.click();
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "/") {
+        botondiv.click();
+    }
+});
