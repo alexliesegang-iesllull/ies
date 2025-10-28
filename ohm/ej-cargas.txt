@@ -1,0 +1,11 @@
+== Ejercicios de cantidad de carga.
+
+. Calculad la cantidad de carga de una batería que tarda un día en 
+vaciarse por completo conectada a un conjunto de resistencias que demandan 
+1 A.
+. Calculad el tiempo de descarga de una batería de coche con los faros 
+delanteros conectados. Suponer R/faro = 10 ohms
+. Calculad la intensidad a la que carga una batería de 50 Ah que tarda 5h 
+en realizar la carga completa. 
+. ¿Cómo podemos doblar el tiempo de descarga del ejercicio del coche?
+
